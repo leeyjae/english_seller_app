@@ -1,25 +1,17 @@
-# 🎈 Blank app template
+# English Market Seller
 
-A simple Streamlit app template for you to modify!
+A seller screen for an English-class market activity. Students can practice
+product vocabulary and reveal a one-time randomized price for each item.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+One product is selected at random for a guaranteed 1,800₩ price each session.
+The other products receive a price from 100₩ to 1,000₩, with prices from
+600₩ to 1,000₩ appearing less often.
 
-### How to run it on your own machine
+## Run locally
 
-Prerequisite: install `uv` if you don't already have it.
+Install `uv` if needed, then sync dependencies and start the app:
 
+```sh
+uv sync
+uv run streamlit run streamlit_app.py
 ```
-$ curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-1. Sync the dependencies
-
-   ```
-   $ uv sync
-   ```
-
-2. Run the app
-
-   ```
-   $ uv run streamlit run streamlit_app.py
-   ```

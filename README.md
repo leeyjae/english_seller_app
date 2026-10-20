@@ -3,9 +3,9 @@
 A seller screen for an English-class market activity. Students can practice
 product vocabulary and reveal a one-time randomized price for each item.
 
-One product is selected at random for a guaranteed 1,800₩ price each session.
-The other products receive a price from 100₩ to 1,000₩, with prices from
-600₩ to 1,000₩ appearing less often.
+One randomly selected product is guaranteed to cost 1,000₩. The other
+products receive a price from 100₩ to 900₩. Prices from 100₩ to 500₩ are
+more common, while prices from 600₩ to 900₩ are less common.
 
 ## Run locally
 

@@ -70,8 +70,8 @@ PRODUCTS = (
         """,
     },
 )
-REGULAR_PRICES = (100, 200, 300, 400, 500, 600, 700, 800, 900, 1000)
-PRICE_WEIGHTS = (20, 20, 18, 15, 12, 6, 4, 2, 2, 1)
+PRICES = (100, 200, 300, 400, 500, 600, 700, 800, 900)
+PRICE_WEIGHTS = (20, 20, 18, 15, 12, 6, 4, 2, 1)
 
 st.set_page_config(page_title="Seller | English Market", page_icon="🛍️", layout="wide")
 
@@ -179,10 +179,10 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-if "special_product" not in st.session_state:
-    st.session_state.special_product = random.choice(PRODUCTS)["id"]
 if "product_prices" not in st.session_state:
     st.session_state.product_prices = {}
+if "special_product" not in st.session_state:
+    st.session_state.special_product = random.choice(PRODUCTS)["id"]
 
 for row_start in range(0, len(PRODUCTS), 3):
     columns = st.columns(3, gap="medium")
@@ -219,10 +219,10 @@ for row_start in range(0, len(PRODUCTS), 3):
                     width="stretch",
                 ):
                     if product["id"] == st.session_state.special_product:
-                        price = 1800
+                        price = 1000
                     else:
                         price = random.choices(
-                            REGULAR_PRICES,
+                            PRICES,
                             weights=PRICE_WEIGHTS,
                             k=1,
                         )[0]
